@@ -26,7 +26,21 @@ describe('Something', function () {
     });
   });
 
-  it.skip('should not be ok - 2', function (done) {
+  it('should not be ok - 2', function (done) {
+    mongoPool.connect(config, function(err, db1) {
+      (!err).should.be.ok;
+      (!!db1).should.be.ok;
+      mongoPool.connect(config, function(err, db2) {
+        (!err).should.be.ok;
+        (!!db2).should.be.ok;
+        // tests exit with diff and error reporting
+        ({}).should.be.equal({});
+        done();
+      }, false);
+    });
+  });
+
+  it.skip('should not be ok - 3', function (done) {
     mongoPool.connect(config, function(err, db1) {
       (!err).should.be.ok;
       (!!db1).should.be.ok;
@@ -41,7 +55,7 @@ describe('Something', function () {
     });
   });
 
-  it.skip('should not be ok - 3', function (done) {
+  it.skip('should not be ok - 4', function (done) {
     mongoPool.connect(config, function(err, db1) {
       (!err).should.be.ok;
       (!!db1).should.be.ok;
