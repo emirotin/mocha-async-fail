@@ -1,0 +1,26 @@
+{
+  "name": "mocha-async-fail",
+  "version": "0.0.0",
+  "description": "mocha-async-fail ================",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r should"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emirotin/mocha-async-fail.git"
+  },
+  "author": "Eugene Mirotin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emirotin/mocha-async-fail/issues"
+  },
+  "homepage": "https://github.com/emirotin/mocha-async-fail",
+  "dependencies": {
+    "mongo-pool2": "*"
+  },
+  "devDependencies": {
+    "should": "~3.1.2",
+    "mocha": "~1.17.1"
+  }
+}
